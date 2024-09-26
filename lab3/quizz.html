@@ -23,7 +23,7 @@
     <main>
         <h2>Quizz</h2>
         <legend>Informações Gerais</legend>
-        <form>
+        <form method="get" action="https://postman-echo.com/get" id="quizParis">
             <fieldset>
                 <p>
                     <label for="nome">Nome:</label>
@@ -44,8 +44,8 @@
             <br>
             <fieldset>
                 <p>
-                    <label for="habitantes">Quantos habitantes Paris tem?</label>
-                    <input type="number" id="habitantes" name="habitantes" min="0" placeholder="Digite um número">
+                    <label for="habitantes">De 0 a 10 quanto gosta de Paris?</label>
+                    <input type="number" id="habitantes" name="habitantes" min="1" max="10" step="1" autocomplete="1">
                 </p>
                 <p>
                     O turismo é importante para Paris?<br>
@@ -56,11 +56,43 @@
                 </p>
                 <p>
                     <label for="monumento">Qual é o seu monumento favorito em Paris?</label>
-                    <input type="text" name="monumento" id="monumento">
+                    <input type="text" name="monumento" id="monumento" placeholder="Ex: Torre Eiffel" maxlength="30"
+                        size="15" autofocus>
                 </p>
+                <p>
+                    Quais são as principais atrações turísticas? (Selecione todas que se aplicam) <br>
+                    <input type="checkbox" id="monumentos" name="atracoes" value="monumentos">
+                    <label for="monumentos">Monumentos históricos</label><br>
+                    <input type="checkbox" id="praias" name="atracoes" value="praias">
+                    <label for="praias">Praias</label><br>
+                    <input type="checkbox" id="museus" name="atracoes" value="museus">
+                    <label for="museus">Museus</label><br>
+                    <input type="checkbox" id="parques" name="atracoes" value="parques">
+                    <label for="parques">Parques naturais</label>
+                </p>
+                <p>
+                    <label for="avaliacao">Qual a sua avaliação sobre Paris?</label>
+                    <input type="range" id="avaliacao" name="avaliacao" min="1" max="10" value="5">
+                </p>
+                <p>
+                    <label for="horario-passeio">Qual horário você recomendaria para um passeio de barco no Rio
+                        Sena?</label>
+                    <input type="time" id="horario-passeio" name="horario-passeio" required>
+                </p>
+                <p>
+                    <label for="data-visita-paris">Qual foi a data da sua última visita a Paris?</label>
+                    <input type="date" id="data-visita-paris" name="data-visita-paris" required>
+                </p>
+                <p>
+                    <label for="cor-cidade">Que cor você acha que melhor representa Paris?</label>
+                    <input type="color" id="cor-cidade" name="cor-cidade" value="#ff69b4">
+                    <p>
+                        <input type="reset" form="quizParis" value="Limpar respostas">
+                    </p>
+                    <p>
+                        <input type="submit" form="quizParis" value="Submeter Quiz">
+                    </p>
             </fieldset>
-            <p>A minha cidade é muito linda!!!</p>
-
         </form>
     </main>
     <footer>
