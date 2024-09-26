@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(98, 107, 109);
+}
+
+fieldset{
+    background-color: rgb(99, 99, 99);
+    border: 2px solid rgb(0, 0, 0)
+}
+
+label{
+    color: rgb(0, 0, 0);
+}
+
+input{
+    border: 2px solid rgb(0, 0, 0) 
+}
