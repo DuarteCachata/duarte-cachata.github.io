@@ -19,7 +19,8 @@ a{
     padding-right: 16px;
 }
 a:hover{
-    color: rgb(211, 127, 31);;
+    color: black;
+    background-color: rgb(211, 127, 31);
 }
 nav{
     background-color: rgb(52, 49, 49);
@@ -61,6 +62,7 @@ footer{
     padding-top: 16px;
     padding-bottom: 16px;
     margin-top: 10px;
+    position: relative;
 }
 
 body{
