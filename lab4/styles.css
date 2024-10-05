@@ -18,7 +18,7 @@ a{
     padding-left: 16px;
     padding-right: 16px;
 }
-a:hover{
+header nav a:hover {
     color: black;
     background-color: rgb(211, 127, 31);
 }
@@ -27,12 +27,21 @@ nav{
     padding: 15px;
     text-align: center;
 }
+.fotografias a {
+    text-decoration: none; 
+}
 
 img{
    border-radius: 5px;
 }
 
 div{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.imagens {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -69,15 +78,81 @@ body{
     background-color: rgb(98, 107, 109);
 }
 
+
+
+#fotografias h3, #video h3, #poema h3 {
+    color: rgb(211, 127, 31);
+    font-size: 24px;
+    border-bottom: 2px solid rgb(52, 49, 49);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#videoIframe{
+    text-align: center;
+    padding-left: 270px;
+}
+
+#iframeFoto{
+    margin: 10px;
+}
+
+.poema {
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.estrofe1{
+    color: rgb(211, 127, 31);
+    
+}
+.estrofe2{
+    color: rgb(52, 49, 49) ;
+}
+
+.estrofe3{
+    color: rgb(211, 127, 31);
+    
+}
+ 
+.estrofe4{
+    color: rgb(52, 49, 49) ;
+}
+
+.estrofe5{
+    color: rgb(211, 127, 31);
+    
+}
+
+table{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 fieldset{
     background-color: rgb(99, 99, 99);
-    border: 2px solid rgb(0, 0, 0)
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 10px;
 }
 
 label{
     color: rgb(0, 0, 0);
+    font-size: small;
+
 }
 
 input{
-    border: 2px solid rgb(0, 0, 0) 
+    border: 2px solid rgb(0, 0, 0) ;
+    font-size: medium;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+br {
+    display: none; 
 }
