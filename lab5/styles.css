@@ -43,8 +43,19 @@ h1, header nav a:hover {
 .visitar table{
     border-collapse: collapse;
 }
+
+.visitar th{
+    background-color: rgb(211, 127, 31);
+}  
+
+.visitar td,.visitar th,.visitar tr {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}   
+
 .visitar tr:nth-child(odd){
-    background-color: rgb(216, 165, 106);
+    background-color: rgb(98, 107, 109);
 }
 
 
