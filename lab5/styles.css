@@ -7,6 +7,21 @@ h1, header nav a:hover {
     background-color: rgb(211, 127, 31);
 }
 
+header h1 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.Restaurantes li,.monumentos li,.locais li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 2em;
+}
+
+
 .Restaurantes,.pontosInteresse,.monumentos,.locais,.melhorLocal,.visitar{
     background-color: rgb(52, 49, 49);
     color: aliceblue;
@@ -28,12 +43,12 @@ h1, header nav a:hover {
 #locais{
     margin: 10px;
     list-style-type:square;
-    padding-left: 10px;
+    padding-left: 30px;
 }
 
 #Restaurantes,#monumentos{
     margin: 10px;
-    padding-left: 10px;
+    padding-left: 40px;
     list-style-type:upper-roman;
 }
 #Restaurantes li:nth-child(odd), #monumentos li:nth-child(odd),#locais li:nth-child(odd){
@@ -56,6 +71,17 @@ h1, header nav a:hover {
 
 .visitar tr:nth-child(odd){
     background-color: rgb(98, 107, 109);
+}
+
+.melhorLocal iframe{
+    width: 700px;
+    height: 466px;
+    margin: auto;
+    padding: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 
