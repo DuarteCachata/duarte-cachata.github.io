@@ -1,0 +1,116 @@
+* {
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; /* medidas sao tomadas da borda */
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+header, main, article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: rgb(39, 36, 36);
+    color: white;
+    position: sticky;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 1.5em;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+#poema p {
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+
+#paisagens {
+    position: relative;
+    overflow: hidden;
+}
+
+#paisagens img {
+    height: 101vh;
+    width: 100vw;
+}
+
+#paisagens p a {
+    color: white;
+    text-decoration: none;
+}
+
+#paisagens p {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+article {
+    height: 100vh;
+    width: 100vw;    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;   
+    background: rgb(225, 168, 77);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#poema {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    font-weight: bolder;
+}
+
+
+  nav a {
+    color: rgb(211, 127, 31);
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgba(154, 128, 91, 0.789);
+    border-radius: 3px;
+    color: rgb(237, 172, 80);
+    padding: 5px;
+}
+
