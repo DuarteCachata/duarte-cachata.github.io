@@ -2,6 +2,7 @@
     margin:0;  
     padding:0;  
     box-sizing: border-box; /* medidas sao tomadas da borda */
+    font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -73,7 +74,7 @@ div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width:35%;
+    width: 55vw;
     margin-top: 20px;
     justify-content: center;
     background-color: rgb(211, 127, 31);
@@ -87,8 +88,10 @@ div {
     background-color: #f0e6e6;
     border-radius: 20px;
     margin-right: 20px;
+    margin-top: 10px;
    
 }
+
 #cidades img {
     border-radius: 20px 0 0 20px;
 }
@@ -131,6 +134,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color:rgb(211, 127, 31) ;
+    width: 100vw;
 }
 
 
