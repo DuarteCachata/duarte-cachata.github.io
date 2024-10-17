@@ -13,7 +13,7 @@
 }
 
 
-h1, header nav a:hover {
+h1, nav a:hover {
     background-color: rgb(211, 127, 31);
 }
 
@@ -110,7 +110,7 @@ a {
     padding-left: 16px;
     padding-right: 16px;
 }
-header nav a:hover {
+ nav a:hover {
     color: black;
 }
 nav{
