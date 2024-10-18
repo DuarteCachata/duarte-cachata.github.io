@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Paris</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/layouts.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
@@ -12,6 +12,12 @@
             <h1>Paris</h1>
         </header>
         <nav>
+            <div class="menu">
+                <button class="menubtn">
+                    ☰
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="menu-content">
             <a href="index.html">
                 <i class="material-icons">home</i>
                 Home
@@ -44,13 +50,14 @@
                 <i class="material-icons">location_city</i>
                 Capitais
             </a>
-          </nav>
-          <div>
+        </div>
+        </nav>
+        <aside>
             <img src="images/paris.png" width="250" height="150" alt="Paris">
             <img src="images/louvre.jpg" width="250" height="150" alt="Louvre">
             <img src="images/parisbarco.jpg" width="250" height="150" alt="Rio em paris">
-        </div>
-    <main>
+        </aside>
+        <main>
         <h2>Quizz</h2>
         <legend>Informações Gerais</legend>
         <form method="get" action="https://postman-echo.com/get" id="quizParis">
