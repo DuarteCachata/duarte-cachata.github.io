@@ -185,6 +185,23 @@ footer{
     width: 100vw;
 }
 
+#parallax {
+    background-image: url(/lab6/images/city.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+#parallax p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
 #experimenta {
     background-color: rgb(211, 127, 31);
     width: 100vw;
