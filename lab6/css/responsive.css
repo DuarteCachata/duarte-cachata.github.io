@@ -1,47 +1,108 @@
 * {
-    margin:0;  
-    padding:0;  
-    box-sizing: border-box; /* medidas sao tomadas da borda */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* medidas sao tomadas da borda */
     font-family: Arial, sans-serif;
 }
 
-header {grid-area: header;}
-nav {grid-area: nav;}
-main {grid-area: main;}
-aside {grid-area: aside;}
-footer {grid-area: footer;}
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@keyframes ani {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 50px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 100px;
+        top: 0px;
+    }
+
+    75% {
+        background-color: green;
+        left: 150px;
+        top: 0px;
+    }
+
+    100% {
+        background-color: red;
+        left: 200px;
+        top: 0px;
+    }
+}
 
 
 /* telefone */
 @media only screen and (max-width: 767px) {
 
-    body{
+    body {
         display: grid;
         background-color: rgb(98, 107, 109);
         grid-template-columns: 1fr;
-        grid-template-areas:  
+        grid-template-areas:
             'header'
-            'nav' 
+            'nav'
             'aside'
-            'main' 
+            'main'
             'footer';
     }
 
+    .animacao {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        animation-name: ani;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        font-size: 1.2rem;
+    }
 
-    nav{
-        grid-area:nav ;
+
+    nav {
+        grid-area: nav;
         background-color: rgb(52, 49, 49);
         padding: 15px;
         text-align: left;
     }
 
 
-    aside{
+    aside {
         text-align: center;
         margin-top: 10px;
     }
 
-    aside img { 
+    aside img {
         width: 50%;
         height: auto;
         margin: 10px;
@@ -53,7 +114,7 @@ footer {grid-area: footer;}
         position: relative;
     }
 
-    .menubtn { 
+    .menubtn {
         font-size: 25px;
         border: none;
         color: white;
@@ -67,7 +128,7 @@ footer {grid-area: footer;}
     .menu-content {
         display: none;
         position: absolute;
-        background-color:rgb(52, 49, 49);
+        background-color: rgb(52, 49, 49);
         z-index: 1;
     }
 
@@ -85,27 +146,29 @@ footer {grid-area: footer;}
         padding: 10px;
     }
 
-    .menubtn:hover + .menu-content {
+    .menubtn:hover+.menu-content {
         display: block;
     }
 
-    .menu-content:hover{
+    .menu-content:hover {
         display: block;
     }
 
-    div.paginaPrincipal p,  div.paginaPrincipal h2{
+    div.paginaPrincipal p,
+    div.paginaPrincipal h2 {
         margin-top: 10px;
         text-align: left;
         display: block;
     }
-    
-    
-    h1, nav a:hover {
+
+
+    h1,
+    nav a:hover {
         background-color: rgb(211, 127, 31);
     }
-    
-    
-    
+
+
+
     header h1 {
         grid-area: header;
         margin: 0;
@@ -114,15 +177,22 @@ footer {grid-area: footer;}
         padding-bottom: 10px;
         padding-top: 10px;
     }
-    
-    .Restaurantes li,.monumentos li,.locais li {
+
+    .Restaurantes li,
+    .monumentos li,
+    .locais li {
         padding-top: 5px;
         padding-bottom: 5px;
         font-size: 2em;
     }
-    
-    
-    .Restaurantes,.pontosInteresse,.monumentos,.locais,.melhorLocal,.visitar{
+
+
+    .Restaurantes,
+    .pontosInteresse,
+    .monumentos,
+    .locais,
+    .melhorLocal,
+    .visitar {
         background-color: rgb(52, 49, 49);
         color: aliceblue;
         text-align: left;
@@ -131,55 +201,66 @@ footer {grid-area: footer;}
         padding-right: 10px;
     }
 
-   .pontosInteresse p{
+    .pontosInteresse p {
         padding-bottom: 10px;
     }
 
-    .Restaurantes h3,.monumentos h3,.locais h3,.melhorLocal h3,.visitar h3{
+    .Restaurantes h3,
+    .monumentos h3,
+    .locais h3,
+    .melhorLocal h3,
+    .visitar h3 {
         border: 1px solid white;
         display: inline-block;
         border-radius: 5px;
         padding: 10px;
         margin-bottom: 10px;
         margin-top: 10px;
-    
+
     }
-    #locais{
+
+    #locais {
         margin: 10px;
-        list-style-type:square;
+        list-style-type: square;
         padding-left: 30px;
     }
-    
-    #Restaurantes,#monumentos{
+
+    #Restaurantes,
+    #monumentos {
         margin: 10px;
         padding-left: 40px;
-        list-style-type:upper-roman;
+        list-style-type: upper-roman;
     }
-    #Restaurantes li:nth-child(odd), #monumentos li:nth-child(odd),#locais li:nth-child(odd){
+
+    #Restaurantes li:nth-child(odd),
+    #monumentos li:nth-child(odd),
+    #locais li:nth-child(odd) {
         color: rgb(211, 127, 31);
     }
-    
-    .visitar table{
+
+    .visitar table {
         border-collapse: collapse;
     }
-    
-    .visitar th{
+
+    .visitar th {
         background-color: rgb(211, 127, 31);
-    }  
-    
-    .visitar td,.visitar th,.visitar tr {
+    }
+
+    .visitar td,
+    .visitar th,
+    .visitar tr {
         border: 1px solid black;
         padding: 10px;
         text-align: center;
-    }   
-    
-    .visitar tr:nth-child(odd){
+    }
+
+    .visitar tr:nth-child(odd) {
         background-color: rgb(98, 107, 109);
     }
-    
-    .melhorLocal iframe{
+
+    .melhorLocal iframe {
         width: 100%;
-        height:auto;
+        height: auto;
         margin: auto;
         padding: auto;
         padding-top: 20px;
@@ -187,14 +268,14 @@ footer {grid-area: footer;}
         display: flex;
         justify-content: center;
     }
-    
-    
-    h1{
+
+
+    h1 {
         text-align: center;
         padding: 10px;
     }
-    
-   p a {
+
+    p a {
         background-color: rgb(52, 49, 49);
         text-decoration: none;
         color: white;
@@ -202,47 +283,48 @@ footer {grid-area: footer;}
         padding-left: 16px;
         padding-right: 16px;
     }
-     nav a:hover {
+
+    nav a:hover {
         color: black;
     }
 
     #fotografias a {
         display: block;
         text-decoration: none;
-        padding: 10px; 
+        padding: 10px;
         width: 100%;
         height: 100%;
-      }
-    
-    img{
-       border-radius: 5px;
-       max-width: 100%; 
-       height: auto;
     }
-    
 
-    
+    img {
+        border-radius: 5px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
     .imagens {
         text-align: center;
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    
-    h2{
+
+    h2 {
         padding-bottom: 10px;
     }
-    
-    main{
+
+    main {
         grid-area: main;
         background-color: rgb(196, 188, 178);
         margin: 10px;
         padding: 20px;
         border-radius: 5px;
     }
-    
-    footer{
+
+    footer {
         grid-area: footer;
-        background-color: rgb(52, 49, 49) ;
+        background-color: rgb(52, 49, 49);
         text-align: center;
         color: white;
         padding-left: 16px;
@@ -252,8 +334,10 @@ footer {grid-area: footer;}
         margin-top: 10px;
         position: relative;
     }
-    
-    #fotografias h3, #video h3, #poema h3 {
+
+    #fotografias h3,
+    #video h3,
+    #poema h3 {
         color: rgb(211, 127, 31);
         font-size: 24px;
         border-bottom: 2px solid rgb(52, 49, 49);
@@ -261,16 +345,16 @@ footer {grid-area: footer;}
         padding-bottom: 10px;
         margin-bottom: 20px;
     }
-    
+
     #fotografias {
         width: 100%;
-      }
+    }
 
     #fotografias a img {
         cursor: zoom-in;
-      }
-    
-    #video iframe{
+    }
+
+    #video iframe {
         width: 100%;
         height: 100%;
         margin-left: auto;
@@ -278,20 +362,20 @@ footer {grid-area: footer;}
         display: block;
     }
 
-    main iframe{
+    main iframe {
         width: 100%;
         height: auto;
         margin-top: 10px;
         border: none;
     }
-    
-    #iframeFoto{
+
+    #iframeFoto {
         margin: 10px;
         width: 100%;
         height: auto;
         display: flex;
     }
-    
+
     .poema {
         font-style: italic;
         line-height: 1.8;
@@ -302,94 +386,119 @@ footer {grid-area: footer;}
         margin: auto;
         padding: 20px 20px 20px 20px;
     }
-    
-    .poema b{
+
+    .poema b {
         text-emphasis: initial;
         font-size: 120%;
         color: rgb(211, 127, 31);
     }
-    .estrofe2,.estrofe4{
+
+    .estrofe2,
+    .estrofe4 {
         color: rgb(211, 127, 31);
-        
+
     }
-    .estrofe1,.estrofe3,.estrofe5{
-        color: rgb(151, 151, 151) ;
+
+    .estrofe1,
+    .estrofe3,
+    .estrofe5 {
+        color: rgb(151, 151, 151);
     }
-    
-    
-    table{
+
+
+    table {
         margin-top: 10px;
         margin-bottom: 10px;
         border-collapse: collapse;
     }
-    tr,th,td{
+
+    tr,
+    th,
+    td {
         padding: 5px 5px 5px 5px;
         border: 1px solid black;
         border-collapse: collapse;
     }
-    
-    .curiosidades{
+
+    .curiosidades {
         margin: 10px;
     }
-    fieldset{
+
+    fieldset {
         background-color: rgb(99, 99, 99);
         border: 2px solid rgb(0, 0, 0);
         margin-top: 10px;
     }
-    label{
+
+    label {
         color: rgb(0, 0, 0);
         font-size: small;
-    
+
     }
-    
-    input{
-        border: 2px solid rgb(0, 0, 0) ;
+
+    input {
+        border: 2px solid rgb(0, 0, 0);
         font-size: medium;
     }
-    
-    label, input {
+
+    label,
+    input {
         display: block;
         margin-bottom: 10px;
     }
-    
+
     br {
-        display: none; 
+        display: none;
     }
 
 }
 
 /*tablet*/
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-    body{
+    body {
         display: grid;
         background-color: rgb(98, 107, 109);
-        grid-template-columns: 3fr 1fr ;
+        grid-template-columns: 3fr 1fr;
         grid-template-rows: 10vh 10vh 1fr 10vh;
-        grid-template-areas:  
+        grid-template-areas:
             'header header'
-            'nav nav' 
+            'nav nav'
             'main aside'
-            'footer footer';  
+            'footer footer';
     }
 
-    nav{
+    .animacao {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        animation-name: ani;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        font-size: 1.2rem;
+    }
+
+    nav {
         width: 100%;
         height: auto;
-        grid-area:nav ;
+        grid-area: nav;
         background-color: rgb(52, 49, 49);
         padding: 15px;
         text-align: left;
     }
 
 
-    aside{
+    aside {
         display: block;
         text-align: center;
         margin-top: 10px;
     }
 
-    aside img { 
+    aside img {
         width: 75%;
         height: auto;
         margin: 10px;
@@ -401,7 +510,7 @@ footer {grid-area: footer;}
         position: relative;
     }
 
-    .menubtn { 
+    .menubtn {
         font-size: 25px;
         border: none;
         color: white;
@@ -415,7 +524,7 @@ footer {grid-area: footer;}
     .menu-content {
         display: none;
         position: absolute;
-        background-color:rgb(52, 49, 49);
+        background-color: rgb(52, 49, 49);
         z-index: 1;
     }
 
@@ -433,27 +542,29 @@ footer {grid-area: footer;}
         padding: 10px;
     }
 
-    .menubtn:hover + .menu-content {
+    .menubtn:hover+.menu-content {
         display: block;
     }
 
-    .menu-content:hover{
+    .menu-content:hover {
         display: block;
     }
 
-    div.paginaPrincipal p,  div.paginaPrincipal h2{
+    div.paginaPrincipal p,
+    div.paginaPrincipal h2 {
         margin-top: 10px;
         text-align: left;
         display: block;
     }
-    
-    
-    h1, nav a:hover {
+
+
+    h1,
+    nav a:hover {
         background-color: rgb(211, 127, 31);
     }
-    
-    
-    
+
+
+
     header h1 {
         display: flex;
         justify-content: center;
@@ -467,15 +578,22 @@ footer {grid-area: footer;}
         padding-top: 10px;
         width: 100%;
     }
-    
-    .Restaurantes li,.monumentos li,.locais li {
+
+    .Restaurantes li,
+    .monumentos li,
+    .locais li {
         padding-top: 5px;
         padding-bottom: 5px;
         font-size: 2em;
     }
-    
-    
-    .Restaurantes,.pontosInteresse,.monumentos,.locais,.melhorLocal,.visitar{
+
+
+    .Restaurantes,
+    .pontosInteresse,
+    .monumentos,
+    .locais,
+    .melhorLocal,
+    .visitar {
         background-color: rgb(52, 49, 49);
         color: aliceblue;
         text-align: left;
@@ -484,55 +602,66 @@ footer {grid-area: footer;}
         padding-right: 10px;
     }
 
-   .pontosInteresse p{
+    .pontosInteresse p {
         padding-bottom: 10px;
     }
 
-    .Restaurantes h3,.monumentos h3,.locais h3,.melhorLocal h3,.visitar h3{
+    .Restaurantes h3,
+    .monumentos h3,
+    .locais h3,
+    .melhorLocal h3,
+    .visitar h3 {
         border: 1px solid white;
         display: inline-block;
         border-radius: 5px;
         padding: 10px;
         margin-bottom: 10px;
         margin-top: 10px;
-    
+
     }
-    #locais{
+
+    #locais {
         margin: 10px;
-        list-style-type:square;
+        list-style-type: square;
         padding-left: 30px;
     }
-    
-    #Restaurantes,#monumentos{
+
+    #Restaurantes,
+    #monumentos {
         margin: 10px;
         padding-left: 40px;
-        list-style-type:upper-roman;
+        list-style-type: upper-roman;
     }
-    #Restaurantes li:nth-child(odd), #monumentos li:nth-child(odd),#locais li:nth-child(odd){
+
+    #Restaurantes li:nth-child(odd),
+    #monumentos li:nth-child(odd),
+    #locais li:nth-child(odd) {
         color: rgb(211, 127, 31);
     }
-    
-    .visitar table{
+
+    .visitar table {
         border-collapse: collapse;
     }
-    
-    .visitar th{
+
+    .visitar th {
         background-color: rgb(211, 127, 31);
-    }  
-    
-    .visitar td,.visitar th,.visitar tr {
+    }
+
+    .visitar td,
+    .visitar th,
+    .visitar tr {
         border: 1px solid black;
         padding: 10px;
         text-align: center;
-    }   
-    
-    .visitar tr:nth-child(odd){
+    }
+
+    .visitar tr:nth-child(odd) {
         background-color: rgb(98, 107, 109);
     }
-    
-    .melhorLocal iframe{
+
+    .melhorLocal iframe {
         width: 100%;
-        height:100%;
+        height: 100%;
         margin: auto;
         padding: auto;
         padding-top: 20px;
@@ -543,15 +672,15 @@ footer {grid-area: footer;}
 
     .melhorLocal {
         width: 100%;
-        height:80vh;
+        height: 80vh;
     }
-    
-    h1{
+
+    h1 {
         text-align: center;
         padding: 10px;
     }
-    
-   p a {
+
+    p a {
         background-color: rgb(52, 49, 49);
         text-decoration: none;
         color: white;
@@ -559,37 +688,38 @@ footer {grid-area: footer;}
         padding-left: 16px;
         padding-right: 16px;
     }
-     nav a:hover {
+
+    nav a:hover {
         color: black;
     }
 
     #fotografias a {
         display: block;
         text-decoration: none;
-        padding: 10px; 
+        padding: 10px;
         width: 100%;
         height: 100%;
-      }
-    
-    img{
-       border-radius: 5px;
-       max-width: 100%; 
-       height: auto;
     }
-    
 
-    
+    img {
+        border-radius: 5px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
     .imagens {
         text-align: center;
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    
-    h2{
+
+    h2 {
         padding-bottom: 10px;
     }
-    
-    main{
+
+    main {
         grid-area: main;
         background-color: rgb(196, 188, 178);
         margin: 10px;
@@ -598,21 +728,23 @@ footer {grid-area: footer;}
         height: auto;
         width: 100%;
     }
-    
-    footer{
+
+    footer {
         grid-area: footer;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(52, 49, 49) ;
+        background-color: rgb(52, 49, 49);
         text-align: center;
         color: white;
         margin-top: 10px;
         position: relative;
         height: 100%;
     }
-    
-    #fotografias h3, #video h3, #poema h3 {
+
+    #fotografias h3,
+    #video h3,
+    #poema h3 {
         color: rgb(211, 127, 31);
         font-size: 24px;
         border-bottom: 2px solid rgb(52, 49, 49);
@@ -620,17 +752,17 @@ footer {grid-area: footer;}
         padding-bottom: 10px;
         margin-bottom: 20px;
     }
-    
+
     #fotografias {
         width: 100%;
         height: auto;
-      }
+    }
 
     #fotografias a img {
         cursor: zoom-in;
-      }
-    
-    #video iframe{
+    }
+
+    #video iframe {
         width: 100%;
         height: 100%;
         margin-left: auto;
@@ -638,20 +770,20 @@ footer {grid-area: footer;}
         display: block;
     }
 
-    main iframe{
+    main iframe {
         width: 75%;
         height: 50%;
         margin-top: 10px;
         border: none;
     }
-    
-    #iframeFoto{
+
+    #iframeFoto {
         margin: 10px;
         width: 100%;
         height: auto;
         display: flex;
     }
-    
+
     .poema {
         font-style: italic;
         line-height: 1.8;
@@ -662,92 +794,117 @@ footer {grid-area: footer;}
         margin: auto;
         padding: 20px 20px 20px 20px;
     }
-    
-    .poema b{
+
+    .poema b {
         text-emphasis: initial;
         font-size: 120%;
         color: rgb(211, 127, 31);
     }
-    .estrofe2,.estrofe4{
+
+    .estrofe2,
+    .estrofe4 {
         color: rgb(211, 127, 31);
-        
+
     }
-    .estrofe1,.estrofe3,.estrofe5{
-        color: rgb(151, 151, 151) ;
+
+    .estrofe1,
+    .estrofe3,
+    .estrofe5 {
+        color: rgb(151, 151, 151);
     }
-    
-    
-    table{
+
+
+    table {
         margin-top: 10px;
         margin-bottom: 10px;
         border-collapse: collapse;
     }
-    tr,th,td{
+
+    tr,
+    th,
+    td {
         padding: 5px 5px 5px 5px;
         border: 1px solid black;
         border-collapse: collapse;
     }
-    
-    .curiosidades{
+
+    .curiosidades {
         margin: 10px;
     }
-    fieldset{
+
+    fieldset {
         background-color: rgb(99, 99, 99);
         border: 2px solid rgb(0, 0, 0);
         margin-top: 10px;
     }
-    label{
+
+    label {
         color: rgb(0, 0, 0);
         font-size: small;
-    
+
     }
-    
-    input{
-        border: 2px solid rgb(0, 0, 0) ;
+
+    input {
+        border: 2px solid rgb(0, 0, 0);
         font-size: medium;
     }
-    
-    label, input {
+
+    label,
+    input {
         display: block;
         margin-bottom: 10px;
     }
-    
+
     br {
-        display: none; 
+        display: none;
     }
 }
 
 /* Laptop */
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-    body{
+    body {
         display: grid;
         width: 100%;
         background-color: rgb(98, 107, 109);
-        grid-template-columns: 1fr 3fr 1fr ;
+        grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 15vh 1fr 10vh;
-        grid-template-areas:  
+        grid-template-areas:
             'header header header'
             'nav main aside'
-            'footer footer footer';  
+            'footer footer footer';
     }
 
-    nav{
+    .animacao {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        animation-name: ani;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        font-size: 1.2rem;
+    }
+
+    nav {
         width: 100%;
         height: auto;
-        grid-area:nav ;
+        grid-area: nav;
         background-color: rgb(52, 49, 49);
         padding: 15px;
         text-align: left;
     }
 
 
-    aside{
+    aside {
         display: block;
         text-align: center;
         margin-top: 10px;
     }
 
-    aside img { 
+    aside img {
         width: 75%;
         height: auto;
         margin: 10px;
@@ -759,16 +916,16 @@ footer {grid-area: footer;}
         position: relative;
     }
 
-    .menubtn { 
+    .menubtn {
         cursor: pointer;
         display: none;
     }
 
     .menu-content {
         display: block;
-        
-        background-color:rgb(52, 49, 49);
-        
+
+        background-color: rgb(52, 49, 49);
+
     }
 
     .menu-content a {
@@ -785,27 +942,29 @@ footer {grid-area: footer;}
         padding: 10px;
     }
 
-    .menubtn:hover + .menu-content {
+    .menubtn:hover+.menu-content {
         display: block;
     }
 
-    .menu-content:hover{
+    .menu-content:hover {
         display: block;
     }
 
-    div.paginaPrincipal p,  div.paginaPrincipal h2{
+    div.paginaPrincipal p,
+    div.paginaPrincipal h2 {
         margin-top: 10px;
         text-align: left;
         display: block;
     }
-    
-    
-    h1, nav a:hover {
+
+
+    h1,
+    nav a:hover {
         background-color: rgb(211, 127, 31);
     }
-    
-    
-    
+
+
+
     header h1 {
         display: flex;
         justify-content: center;
@@ -819,15 +978,22 @@ footer {grid-area: footer;}
         padding-top: 10px;
         width: 100%;
     }
-    
-    .Restaurantes li,.monumentos li,.locais li {
+
+    .Restaurantes li,
+    .monumentos li,
+    .locais li {
         padding-top: 5px;
         padding-bottom: 5px;
         font-size: 2em;
     }
-    
-    
-    .Restaurantes,.pontosInteresse,.monumentos,.locais,.melhorLocal,.visitar{
+
+
+    .Restaurantes,
+    .pontosInteresse,
+    .monumentos,
+    .locais,
+    .melhorLocal,
+    .visitar {
         background-color: rgb(52, 49, 49);
         color: aliceblue;
         text-align: left;
@@ -836,55 +1002,66 @@ footer {grid-area: footer;}
         padding-right: 10px;
     }
 
-   .pontosInteresse p{
+    .pontosInteresse p {
         padding-bottom: 10px;
     }
 
-    .Restaurantes h3,.monumentos h3,.locais h3,.melhorLocal h3,.visitar h3{
+    .Restaurantes h3,
+    .monumentos h3,
+    .locais h3,
+    .melhorLocal h3,
+    .visitar h3 {
         border: 1px solid white;
         display: inline-block;
         border-radius: 5px;
         padding: 10px;
         margin-bottom: 10px;
         margin-top: 10px;
-    
+
     }
-    #locais{
+
+    #locais {
         margin: 10px;
-        list-style-type:square;
+        list-style-type: square;
         padding-left: 30px;
     }
-    
-    #Restaurantes,#monumentos{
+
+    #Restaurantes,
+    #monumentos {
         margin: 10px;
         padding-left: 40px;
-        list-style-type:upper-roman;
+        list-style-type: upper-roman;
     }
-    #Restaurantes li:nth-child(odd), #monumentos li:nth-child(odd),#locais li:nth-child(odd){
+
+    #Restaurantes li:nth-child(odd),
+    #monumentos li:nth-child(odd),
+    #locais li:nth-child(odd) {
         color: rgb(211, 127, 31);
     }
-    
-    .visitar table{
+
+    .visitar table {
         border-collapse: collapse;
     }
-    
-    .visitar th{
+
+    .visitar th {
         background-color: rgb(211, 127, 31);
-    }  
-    
-    .visitar td,.visitar th,.visitar tr {
+    }
+
+    .visitar td,
+    .visitar th,
+    .visitar tr {
         border: 1px solid black;
         padding: 10px;
         text-align: center;
-    }   
-    
-    .visitar tr:nth-child(odd){
+    }
+
+    .visitar tr:nth-child(odd) {
         background-color: rgb(98, 107, 109);
     }
-    
-    .melhorLocal iframe{
+
+    .melhorLocal iframe {
         width: 100%;
-        height:100%;
+        height: 100%;
         margin: auto;
         padding: auto;
         padding-top: 20px;
@@ -895,15 +1072,15 @@ footer {grid-area: footer;}
 
     .melhorLocal {
         width: 100%;
-        height:80vh;
+        height: 80vh;
     }
-    
-    h1{
+
+    h1 {
         text-align: center;
         padding: 10px;
     }
-    
-   p a {
+
+    p a {
         background-color: rgb(52, 49, 49);
         text-decoration: none;
         color: white;
@@ -911,37 +1088,38 @@ footer {grid-area: footer;}
         padding-left: 16px;
         padding-right: 16px;
     }
-     nav a:hover {
+
+    nav a:hover {
         color: black;
     }
 
     #fotografias a {
         display: block;
         text-decoration: none;
-        padding: 10px; 
+        padding: 10px;
         width: 100%;
         height: 100%;
-      }
-    
-    img{
-       border-radius: 5px;
-       max-width: 100%; 
-       height: auto;
     }
-    
 
-    
+    img {
+        border-radius: 5px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
     .imagens {
         text-align: center;
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    
-    h2{
+
+    h2 {
         padding-bottom: 10px;
     }
-    
-    main{
+
+    main {
         grid-area: main;
         background-color: rgb(196, 188, 178);
         margin: 10px;
@@ -950,21 +1128,23 @@ footer {grid-area: footer;}
         height: auto;
         width: 100%;
     }
-    
-    footer{
+
+    footer {
         grid-area: footer;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(52, 49, 49) ;
+        background-color: rgb(52, 49, 49);
         text-align: center;
         color: white;
         margin-top: 10px;
         position: relative;
         height: 100%;
     }
-    
-    #fotografias h3, #video h3, #poema h3 {
+
+    #fotografias h3,
+    #video h3,
+    #poema h3 {
         color: rgb(211, 127, 31);
         font-size: 24px;
         border-bottom: 2px solid rgb(52, 49, 49);
@@ -972,17 +1152,17 @@ footer {grid-area: footer;}
         padding-bottom: 10px;
         margin-bottom: 20px;
     }
-    
+
     #fotografias {
         width: 100%;
         height: auto;
-      }
+    }
 
     #fotografias a img {
         cursor: zoom-in;
-      }
-    
-    #video iframe{
+    }
+
+    #video iframe {
         width: 100%;
         height: 100%;
         margin-left: auto;
@@ -990,20 +1170,20 @@ footer {grid-area: footer;}
         display: block;
     }
 
-    main iframe{
+    main iframe {
         width: 75%;
         height: 50%;
         margin-top: 10px;
         border: none;
     }
-    
-    #iframeFoto{
+
+    #iframeFoto {
         margin: 10px;
         width: 100%;
         height: auto;
         display: flex;
     }
-    
+
     .poema {
         font-style: italic;
         line-height: 1.8;
@@ -1014,87 +1194,115 @@ footer {grid-area: footer;}
         margin: auto;
         padding: 20px 20px 20px 20px;
     }
-    
-    .poema b{
+
+    .poema b {
         text-emphasis: initial;
         font-size: 120%;
         color: rgb(211, 127, 31);
     }
-    .estrofe2,.estrofe4{
+
+    .estrofe2,
+    .estrofe4 {
         color: rgb(211, 127, 31);
-        
+
     }
-    .estrofe1,.estrofe3,.estrofe5{
-        color: rgb(151, 151, 151) ;
+
+    .estrofe1,
+    .estrofe3,
+    .estrofe5 {
+        color: rgb(151, 151, 151);
     }
-    
-    
-    table{
+
+
+    table {
         margin-top: 10px;
         margin-bottom: 10px;
         border-collapse: collapse;
     }
-    tr,th,td{
+
+    tr,
+    th,
+    td {
         padding: 5px 5px 5px 5px;
         border: 1px solid black;
         border-collapse: collapse;
     }
-    
-    .curiosidades{
+
+    .curiosidades {
         margin: 10px;
     }
-    fieldset{
+
+    fieldset {
         background-color: rgb(99, 99, 99);
         border: 2px solid rgb(0, 0, 0);
         margin-top: 10px;
     }
-    label{
+
+    label {
         color: rgb(0, 0, 0);
         font-size: small;
-    
+
     }
-    
-    input{
-        border: 2px solid rgb(0, 0, 0) ;
+
+    input {
+        border: 2px solid rgb(0, 0, 0);
         font-size: medium;
     }
-    
-    label, input {
+
+    label,
+    input {
         display: block;
         margin-bottom: 10px;
     }
-    
+
     br {
-        display: none; 
+        display: none;
     }
 }
 
 /* 4K */
 @media only screen and (min-width: 1441px) {
-    body{
+    body {
         display: grid;
         width: 100%;
         background-color: rgb(98, 107, 109);
-        grid-template-columns: 20vw 1fr 1fr ;
+        grid-template-columns: 20vw 1fr 1fr;
         grid-template-rows: 15vh 1fr 30vh 10vh;
-        grid-template-areas:  
+        grid-template-areas:
             'header header header'
             'nav main main'
             'nav aside aisde'
-            'footer footer footer';  
+            'footer footer footer';
     }
 
-    nav{
+    .animacao {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        animation-name: ani;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        font-size: 1.2rem;
+    }
+
+
+
+
+    nav {
         width: auto;
         height: auto;
-        grid-area:nav ;
+        grid-area: nav;
         background-color: rgb(52, 49, 49);
         padding: 15px;
         text-align: left;
     }
 
 
-    aside{
+    aside {
         display: flex;
         justify-content: left;
         text-align: center;
@@ -1102,7 +1310,7 @@ footer {grid-area: footer;}
         height: auto;
     }
 
-    aside img { 
+    aside img {
         width: 60%;
         height: auto;
         margin: 10px;
@@ -1114,16 +1322,16 @@ footer {grid-area: footer;}
         position: relative;
     }
 
-    .menubtn { 
+    .menubtn {
         cursor: pointer;
         display: none;
     }
 
     .menu-content {
         display: block;
-        
-        background-color:rgb(52, 49, 49);
-        
+
+        background-color: rgb(52, 49, 49);
+
     }
 
     .menu-content a {
@@ -1140,27 +1348,29 @@ footer {grid-area: footer;}
         padding: 10px;
     }
 
-    .menubtn:hover + .menu-content {
+    .menubtn:hover+.menu-content {
         display: block;
     }
 
-    .menu-content:hover{
+    .menu-content:hover {
         display: block;
     }
 
-    div.paginaPrincipal p,  div.paginaPrincipal h2{
+    div.paginaPrincipal p,
+    div.paginaPrincipal h2 {
         margin-top: 10px;
         text-align: left;
         display: block;
     }
-    
-    
-    h1, nav a:hover {
+
+
+    h1,
+    nav a:hover {
         background-color: rgb(211, 127, 31);
     }
-    
-    
-    
+
+
+
     header h1 {
         display: flex;
         justify-content: center;
@@ -1174,15 +1384,22 @@ footer {grid-area: footer;}
         padding-top: 10px;
         width: 100%;
     }
-    
-    .Restaurantes li,.monumentos li,.locais li {
+
+    .Restaurantes li,
+    .monumentos li,
+    .locais li {
         padding-top: 5px;
         padding-bottom: 5px;
         font-size: 2em;
     }
-    
-    
-    .Restaurantes,.pontosInteresse,.monumentos,.locais,.melhorLocal,.visitar{
+
+
+    .Restaurantes,
+    .pontosInteresse,
+    .monumentos,
+    .locais,
+    .melhorLocal,
+    .visitar {
         background-color: rgb(52, 49, 49);
         color: aliceblue;
         text-align: left;
@@ -1191,55 +1408,66 @@ footer {grid-area: footer;}
         padding-right: 10px;
     }
 
-   .pontosInteresse p{
+    .pontosInteresse p {
         padding-bottom: 10px;
     }
 
-    .Restaurantes h3,.monumentos h3,.locais h3,.melhorLocal h3,.visitar h3{
+    .Restaurantes h3,
+    .monumentos h3,
+    .locais h3,
+    .melhorLocal h3,
+    .visitar h3 {
         border: 1px solid white;
         display: inline-block;
         border-radius: 5px;
         padding: 10px;
         margin-bottom: 10px;
         margin-top: 10px;
-    
+
     }
-    #locais{
+
+    #locais {
         margin: 10px;
-        list-style-type:square;
+        list-style-type: square;
         padding-left: 30px;
     }
-    
-    #Restaurantes,#monumentos{
+
+    #Restaurantes,
+    #monumentos {
         margin: 10px;
         padding-left: 40px;
-        list-style-type:upper-roman;
+        list-style-type: upper-roman;
     }
-    #Restaurantes li:nth-child(odd), #monumentos li:nth-child(odd),#locais li:nth-child(odd){
+
+    #Restaurantes li:nth-child(odd),
+    #monumentos li:nth-child(odd),
+    #locais li:nth-child(odd) {
         color: rgb(211, 127, 31);
     }
-    
-    .visitar table{
+
+    .visitar table {
         border-collapse: collapse;
     }
-    
-    .visitar th{
+
+    .visitar th {
         background-color: rgb(211, 127, 31);
-    }  
-    
-    .visitar td,.visitar th,.visitar tr {
+    }
+
+    .visitar td,
+    .visitar th,
+    .visitar tr {
         border: 1px solid black;
         padding: 10px;
         text-align: center;
-    }   
-    
-    .visitar tr:nth-child(odd){
+    }
+
+    .visitar tr:nth-child(odd) {
         background-color: rgb(98, 107, 109);
     }
-    
-    .melhorLocal iframe{
+
+    .melhorLocal iframe {
         width: 100%;
-        height:100%;
+        height: 100%;
         margin: auto;
         padding: auto;
         padding-top: 20px;
@@ -1250,15 +1478,15 @@ footer {grid-area: footer;}
 
     .melhorLocal {
         width: 100%;
-        height:80vh;
+        height: 80vh;
     }
-    
-    h1{
+
+    h1 {
         text-align: center;
         padding: 10px;
     }
-    
-   p a {
+
+    p a {
         background-color: rgb(52, 49, 49);
         text-decoration: none;
         color: white;
@@ -1266,36 +1494,37 @@ footer {grid-area: footer;}
         padding-left: 16px;
         padding-right: 16px;
     }
-     nav a:hover {
+
+    nav a:hover {
         color: black;
     }
 
     #fotografias a {
         display: block;
         text-decoration: none;
-        padding: 10px; 
+        padding: 10px;
         width: 100%;
         height: 100%;
-      }
-    
-    img{
-       border-radius: 5px;
-       max-width: 100%; 
-       height: auto;
     }
-    
 
-    
+    img {
+        border-radius: 5px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
     .imagens {
         text-align: center;
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    
-    h2{
+
+    h2 {
         padding-bottom: 10px;
     }
-    
+
     main {
         grid-area: main;
         background-color: rgb(196, 188, 178);
@@ -1303,23 +1532,25 @@ footer {grid-area: footer;}
         padding: 20px;
         border-radius: 5px;
         width: 100%;
-        min-height: auto; 
+        min-height: auto;
     }
-    
-    footer{
+
+    footer {
         grid-area: footer;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(52, 49, 49) ;
+        background-color: rgb(52, 49, 49);
         text-align: center;
         color: white;
         margin-top: 10px;
         position: relative;
         height: 100%;
     }
-    
-    #fotografias h3, #video h3, #poema h3 {
+
+    #fotografias h3,
+    #video h3,
+    #poema h3 {
         color: rgb(211, 127, 31);
         font-size: 24px;
         border-bottom: 2px solid rgb(52, 49, 49);
@@ -1327,17 +1558,17 @@ footer {grid-area: footer;}
         padding-bottom: 10px;
         margin-bottom: 20px;
     }
-    
+
     #fotografias {
         width: 100%;
         height: auto;
-      }
+    }
 
     #fotografias a img {
         cursor: zoom-in;
-      }
-    
-    #video iframe{
+    }
+
+    #video iframe {
         width: 100%;
         height: 100%;
         margin-left: auto;
@@ -1345,20 +1576,20 @@ footer {grid-area: footer;}
         display: block;
     }
 
-    main iframe{
+    main iframe {
         width: 75%;
-        height:auto;
+        height: auto;
         margin-top: 10px;
         border: none;
     }
-    
-    #iframeFoto{
+
+    #iframeFoto {
         margin: 10px;
         width: 100%;
         height: auto;
         display: flex;
     }
-    
+
     .poema {
         font-style: italic;
         line-height: 1.8;
@@ -1369,57 +1600,68 @@ footer {grid-area: footer;}
         margin: auto;
         padding: 20px 20px 20px 20px;
     }
-    
-    .poema b{
+
+    .poema b {
         text-emphasis: initial;
         font-size: 120%;
         color: rgb(211, 127, 31);
     }
-    .estrofe2,.estrofe4{
+
+    .estrofe2,
+    .estrofe4 {
         color: rgb(211, 127, 31);
-        
+
     }
-    .estrofe1,.estrofe3,.estrofe5{
-        color: rgb(151, 151, 151) ;
+
+    .estrofe1,
+    .estrofe3,
+    .estrofe5 {
+        color: rgb(151, 151, 151);
     }
-    
-    
-    table{
+
+
+    table {
         margin-top: 10px;
         margin-bottom: 10px;
         border-collapse: collapse;
     }
-    tr,th,td{
+
+    tr,
+    th,
+    td {
         padding: 5px 5px 5px 5px;
         border: 1px solid black;
         border-collapse: collapse;
     }
-    
-    .curiosidades{
+
+    .curiosidades {
         margin: 10px;
     }
-    fieldset{
+
+    fieldset {
         background-color: rgb(99, 99, 99);
         border: 2px solid rgb(0, 0, 0);
         margin-top: 10px;
     }
-    label{
+
+    label {
         color: rgb(0, 0, 0);
         font-size: small;
-    
+
     }
-    
-    input{
-        border: 2px solid rgb(0, 0, 0) ;
+
+    input {
+        border: 2px solid rgb(0, 0, 0);
         font-size: medium;
     }
-    
-    label, input {
+
+    label,
+    input {
         display: block;
         margin-bottom: 10px;
     }
-    
+
     br {
-        display: none; 
+        display: none;
     }
 }
