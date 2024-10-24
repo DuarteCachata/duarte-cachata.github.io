@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+   
     box-sizing: border-box;
     /* medidas sao tomadas da borda */
     font-family: Arial, sans-serif;
@@ -41,6 +40,8 @@ footer {
             'footer';
     }
 
+
+
     header{
         grid-area: header;
         background-color: rgb(188, 184, 184);
@@ -60,9 +61,15 @@ footer {
         border-radius: 10px;
         background-color:white;
         padding: 10px;
-        justify-content: space-between;
         margin:10px;
     }
+
+    nav h2{
+        margin:10px;
+
+    }
+
+    
 
     nav a{
         text-decoration: none;
