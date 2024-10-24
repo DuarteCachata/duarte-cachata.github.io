@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* medidas sao tomadas da borda */
+    font-family: Arial, sans-serif;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+/* telefone */
+@media only screen and (max-width: 767px) {
+
+    body {
+        display: grid;
+        background-color: rgb(176, 180, 180);
+        grid-template-rows: 60px 1fr 1fr 1fr 60px;
+        gap:10px;
+        grid-template-areas:
+            'header'
+            'aside'
+            'main'
+            'nav'
+            'footer';
+    }
+
+    header{
+        grid-area: header;
+        background-color: rgb(188, 184, 184);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 50px;
+        height: 40px;
+        background-color: rgb(117, 118, 118);
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(even){
+        background-color: rgb(238, 237, 237) ;
+    }   
+    
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+
+    main {
+        grid-area: main;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+        font-size:1.2rem ;
+    }
+    main h2 {
+        margin-bottom:10px;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: white;
+        margin: 10px;
+        border-radius: 5px;
+        
+        padding: 20px;
+    
+        
+    }
+    footer {
+        grid-area: footer;
+        background-color: rgb(188, 184, 184);
+        padding: 14px;
+        color:black;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+}  
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    body {
+        display: grid;
+        background-color: rgb(176, 180, 180);
+        grid-template-rows: 60px 1fr 1fr 60px;
+        grid-template-columns: 1fr 2fr ;
+        gap:10px;
+        grid-template-areas:
+            'header header'
+            'main main'
+            'aside nav'
+            'footer footer';
+    }
+
+    header{
+        grid-area: header;
+        background-color: rgb(188, 184, 184);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 50px;
+        height: 40px;
+        background-color: rgb(117, 118, 118);
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(even){
+        background-color: rgb(238, 237, 237) ;
+    }   
+    
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+
+    main {
+        grid-area: main;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+        font-size:1.2rem ;
+    }
+    main h2 {
+        margin-bottom:10px;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: white;
+        margin: 10px;
+        border-radius: 5px;
+        
+        padding: 20px;
+    
+        
+    }
+    footer {
+        grid-area: footer;
+        background-color: rgb(188, 184, 184);
+        padding: 14px;
+        color:black;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+}  
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    body {
+        display: grid;
+        background-color: rgb(176, 180, 180);
+        grid-template-rows: 60px 1fr 1fr 60px;
+        grid-template-columns: 1fr 2fr ;
+        gap:10px;
+        grid-template-areas:
+            'header header'
+            'main main'
+            'aside nav'
+            'footer footer';
+    }
+
+    header{
+        grid-area: header;
+        background-color: rgb(188, 184, 184);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 50px;
+        height: 40px;
+        background-color: rgb(117, 118, 118);
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(even){
+        background-color: rgb(238, 237, 237) ;
+    }   
+    
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+
+    main {
+        grid-area: main;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+        font-size:1.2rem ;
+    }
+    main h2 {
+        margin-bottom:10px;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: white;
+        margin: 10px;
+        border-radius: 5px;
+        
+        padding: 20px;
+    
+        
+    }
+    footer {
+        grid-area: footer;
+        background-color: rgb(188, 184, 184);
+        padding: 14px;
+        color:black;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+}  
+
+
+    /* Laptop */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    body {
+        display: grid;
+        background-color: rgb(176, 180, 180);
+        grid-template-rows: 60px 1fr 1fr 60px;
+        grid-template-columns: 1fr 2fr ;
+        gap:10px;
+        grid-template-areas:
+            'header header'
+            'main main'
+            'aside nav'
+            'footer footer';
+    }
+
+    header{
+        grid-area: header;
+        background-color: rgb(188, 184, 184);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 50px;
+        height: 40px;
+        background-color: rgb(117, 118, 118);
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(even){
+        background-color: rgb(238, 237, 237) ;
+    }   
+    
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+
+    main {
+        grid-area: main;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+        font-size:1.2rem ;
+    }
+    main h2 {
+        margin-bottom:10px;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: white;
+        margin: 10px;
+        border-radius: 5px;
+        
+        padding: 20px;
+    
+        
+    }
+    footer {
+        grid-area: footer;
+        background-color: rgb(188, 184, 184);
+        padding: 14px;
+        color:black;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+}  
+
+   /* 4k */
+   @media only screen and (min-width: 1441px) {
+    body {
+        display: grid;
+        background-color: rgb(176, 180, 180);
+        grid-template-rows: 60px 1fr 1fr 60px;
+        grid-template-columns: 1fr 2fr ;
+        gap:10px;
+        grid-template-areas:
+            'header header'
+            'main main'
+            'aside nav'
+            'footer footer';
+    }
+
+    header{
+        grid-area: header;
+        background-color: rgb(188, 184, 184);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 50px;
+        height: 40px;
+        background-color: rgb(117, 118, 118);
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(even){
+        background-color: rgb(238, 237, 237) ;
+    }   
+    
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+
+    main {
+        grid-area: main;
+        border-radius: 10px;
+        background-color:white;
+        padding: 10px;
+        justify-content: space-between;
+        margin:10px;
+        font-size:1.2rem ;
+    }
+    main h2 {
+        margin-bottom:10px;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: white;
+        margin: 10px;
+        border-radius: 5px;
+        
+        padding: 20px;
+    
+        
+    }
+    footer {
+        grid-area: footer;
+        background-color: rgb(188, 184, 184);
+        padding: 14px;
+        color:black;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+}  
