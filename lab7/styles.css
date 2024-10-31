@@ -1,0 +1,34 @@
+*{
+    background-color: rgb(236, 236, 236);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.2rem;
+    margin: 50px;
+}
+
+li{
+    padding-top: 30px;
+}
+
+button{
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: rgb(201, 201, 203);
+    cursor:grab;
+}
+
+input{
+    border: 3px solid black;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
