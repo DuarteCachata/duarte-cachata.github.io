@@ -4,7 +4,10 @@ const btngreen = document.querySelector('#btnGreen')
 const btnblue = document.querySelector('#btnBlue')
 const TextoCor = document.querySelector('#texto-cor')
 const background = document.querySelector('#background')
+const btnconta = document.querySelector('#btnConta')
+const stringcount = document.querySelector('#counter')
 let random = 0;
+let counter = 0;
 
 function mudarTexto() {
     if (over.innerText == "Passa por aqui!"){
@@ -35,6 +38,11 @@ function muda_aleatorio(){
 
 }
 
+function count(){
+    counter++;
+    stringcount.innerHTML=counter;
+}
+
 
 over.addEventListener('mouseover', mudarTexto);
 over.addEventListener('mouseout', mudarTexto);
@@ -42,3 +50,4 @@ btnred.addEventListener('click',button_red);
 btngreen.addEventListener('click',button_green);
 btnblue.addEventListener('click',button_blue);
 background.addEventListener('keyup', muda_aleatorio)
+btnconta.addEventListener('click',count)
