@@ -6,6 +6,8 @@ const TextoCor = document.querySelector('#texto-cor')
 const background = document.querySelector('#background')
 const btnconta = document.querySelector('#btnConta')
 const stringcount = document.querySelector('#counter')
+const colorinput = document.querySelector('#colorInput')
+const backcolor = document.querySelector('#backColor')
 let random = 0;
 let counter = 0;
 
@@ -43,6 +45,11 @@ function count(){
     stringcount.innerHTML=counter;
 }
 
+function changeBackgroundColor() {
+    const color = colorinput.value;  
+    document.body.style.backgroundColor = 'color';
+}
+
 
 over.addEventListener('mouseover', mudarTexto);
 over.addEventListener('mouseout', mudarTexto);
@@ -51,3 +58,4 @@ btngreen.addEventListener('click',button_green);
 btnblue.addEventListener('click',button_blue);
 background.addEventListener('keyup', muda_aleatorio)
 btnconta.addEventListener('click',count)
+backcolor.addEventListener('click',changeBackgroundColor)
