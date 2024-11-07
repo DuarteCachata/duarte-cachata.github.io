@@ -1,0 +1,127 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    color: #333;
+}
+
+
+h1 {
+    color: #4a90e2;
+}
+
+select {
+    padding: 8px;
+    width: 200px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+}
+
+.box:hover {
+    background-color: #8ab6e6;
+    
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+button:active {
+    background-color: #285c8a;
+}
+
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+
+form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form button {
+    background-color: #57b37a;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+form button:hover {
+    background-color: #469262;
+}
+
+
+#message {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

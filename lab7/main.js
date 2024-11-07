@@ -56,6 +56,7 @@ over.addEventListener('mouseout', mudarTexto);
 btnred.addEventListener('click',button_red);
 btngreen.addEventListener('click',button_green);
 btnblue.addEventListener('click',button_blue);
-background.addEventListener('keyup', muda_aleatorio)
-btnconta.addEventListener('click',count)
-backcolor.addEventListener('click',changeBackgroundColor)
+background.addEventListener('keyup', muda_aleatorio);
+btnconta.addEventListener('click',count);
+backcolor.addEventListener('click',changeBackgroundColor);
+
