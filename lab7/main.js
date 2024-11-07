@@ -6,8 +6,8 @@ const TextoCor = document.querySelector('#texto-cor')
 const background = document.querySelector('#background')
 const btnconta = document.querySelector('#btnConta')
 const stringcount = document.querySelector('#counter')
-const colorinput = document.querySelector('#colorInput')
 const backcolor = document.querySelector('#backColor')
+const body = document.querySelector('body')
 let random = 0;
 let counter = 0;
 
@@ -45,9 +45,9 @@ function count(){
     stringcount.innerHTML=counter;
 }
 
-function changeBackgroundColor() {
-    const color = colorinput.value;  
-    document.body.style.backgroundColor = 'color';
+function changeBackgroundColor() {  
+    const colorinput = document.querySelector('#colorInput').value
+    body.style.backgroundColor = colorinput;
 }
 
 
