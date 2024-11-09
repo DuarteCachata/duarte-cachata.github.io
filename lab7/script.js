@@ -5,6 +5,8 @@ const message = document.querySelector('#message');
 const nameInput = document.querySelector('#nameInput');
 const colorSelect = document.querySelector('#colorSelect');
 const body = document.querySelector('body')
+const container = document.querySelector('#container');
+
 
 box.addEventListener('mouseover', mudarTexto);
 box.addEventListener('mouseout', mudarTexto);
@@ -19,6 +21,7 @@ function handleColorChange() {
     if (selectedColor) {
         message.innerText = "Escolheu a cor: " + selectedColor;
         body.style.backgroundColor = selectedColor;
+        container.style.backgroundColor = selectedColor;
 
     } else {
         message.innerText = "Nenhuma cor selecionada.";
