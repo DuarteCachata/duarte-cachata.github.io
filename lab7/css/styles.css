@@ -5,8 +5,12 @@
 }
 
 body{
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(211, 127, 31);
     font-size: 1.2rem;
+}
+
+h1{
+    margin: 50px;
 }
 
 ol{
