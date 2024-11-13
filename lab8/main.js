@@ -6,6 +6,7 @@ const btnconta = document.querySelector('#btnConta')
 const stringcount = document.querySelector('#counter')
 const backcolor = document.querySelector('#backColor')
 const body = document.querySelector('body')
+const colorSelect = document.querySelector('#colorSelect')
 let random = 0;
 let counter = 0;
 
@@ -32,8 +33,8 @@ function muda_aleatorio(){
 
 }
 
-document.querySelector('#colorSelect').onchange = function() {
-    document.querySelector('body').style.backgroundColor = this.value;
+colorSelect.onchange = function() {
+    body.style.backgroundColor = colorSelect.value;
 }
 
 const count = () => {
