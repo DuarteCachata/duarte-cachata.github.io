@@ -1,7 +1,5 @@
+document.addEventListener('DOMContentLoaded', function () {
 const over = document.querySelector('#over');
-const btnred = document.querySelector('#btnRed')
-const btngreen = document.querySelector('#btnGreen')
-const btnblue = document.querySelector('#btnBlue')
 const TextoCor = document.querySelector('#texto-cor')
 const background = document.querySelector('#background')
 const btnconta = document.querySelector('#btnConta')
@@ -19,17 +17,11 @@ function mudarTexto() {
     }
 }
 
-function button_red(){
-    TextoCor.style.color = "red";
-}
-
-function button_green(){
-    TextoCor.style.color = "green";
-}
-
-function button_blue(){
-    TextoCor.style.color = "blue";
-}
+document.querySelectorAll('button[data-color]').forEach(button => {
+    button.addEventListener('click', () => {
+        TextoCor.style.color = button.dataset.color;
+    })
+})
 
 function muda_aleatorio(){
     random++;
@@ -40,10 +32,14 @@ function muda_aleatorio(){
 
 }
 
-function count(){
-    counter++;
-    stringcount.innerHTML=counter;
+document.querySelector('#colorSelect').onchange = function() {
+    document.querySelector('body').style.backgroundColor = this.value;
 }
+
+const count = () => {
+    counter++;
+    stringcount.innerHTML = counter;
+};
 
 function changeBackgroundColor() {  
     const colorinput = document.querySelector('#colorInput').value
@@ -53,10 +49,8 @@ function changeBackgroundColor() {
 
 over.addEventListener('mouseover', mudarTexto);
 over.addEventListener('mouseout', mudarTexto);
-btnred.addEventListener('click',button_red);
-btngreen.addEventListener('click',button_green);
-btnblue.addEventListener('click',button_blue);
 background.addEventListener('keyup', muda_aleatorio);
 btnconta.addEventListener('click',count);
 backcolor.addEventListener('click',changeBackgroundColor);
 
+})

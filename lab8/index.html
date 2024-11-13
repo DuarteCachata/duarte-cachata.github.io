@@ -23,18 +23,21 @@
       </nav>
     <ol>
         <li id="over">Passa por aqui!</li>
-        <li><span id="texto-cor">Pinta-me!</span>
-            <button id="btnRed">Red</button>
-            <button id="btnGreen">Green</button>
-            <button id="btnBlue">Blue</button>
+        <li><p id="texto-cor">Pinta-me!</p>
+            <button data-color="red">Red</button>
+            <button data-color="green">Green</button>
+            <button data-color="blue">Blue</button>
         </li>
         <li>Experimenta escrever... 
             <input type="text-area" id="background">
         </li>
-        <li>Escolha uma cor em inglês: 
-            <input type="text" id="colorInput">
-            <button id="backColor">Submeter</button>
-        </li>
+        <li>Escolha uma cor:
+            <select id="colorSelect">
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+            </li>
         <li>
             <button id="btnConta">Conta!</button> 
             <span id="counter" >0</span>
