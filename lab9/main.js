@@ -134,6 +134,7 @@ function criarProduto(produto) {
     botao.addEventListener('click', function () {
         adicionarAoCarrinho(produto); 
     });
+    
 
     artigo.append(titulo, imagem, descricao, preco, rating, botao);
 
