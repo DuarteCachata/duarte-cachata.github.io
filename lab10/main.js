@@ -52,10 +52,6 @@ function criarProdutoCarrinho(produto, index) {
 const titulo = document.createElement('h3');
 titulo.textContent = produto.title;
 
-const categoria = document.createElement('span');
-categoria.textContent = produto.category;
-categoria.classList.add('categoria');
-
 const imagem = document.createElement('img');
 imagem.src = produto.image;
 imagem.alt = produto.title;
@@ -83,7 +79,7 @@ rating.classList.add('rating');
         removerProdutoCarrinho(index); 
     });
 
-    artigo.append(titulo,categoria, imagem,descricao, preco,rating, botaoRemover);
+    artigo.append(titulo, imagem,descricao, preco,rating, botaoRemover);
 
     return artigo;
 }
@@ -111,10 +107,6 @@ function criarProduto(produto) {
     
     const titulo = document.createElement('h3');
     titulo.textContent = produto.title;
-
-    const categoria = document.createElement('span');
-    categoria.textContent = produto.category;
-    categoria.classList.add('categoria');
 
     
     const imagem = document.createElement('img');
@@ -144,7 +136,7 @@ function criarProduto(produto) {
     });
     
 
-    artigo.append(titulo, categoria,imagem, descricao, preco, rating, botao);
+    artigo.append(titulo, imagem, descricao, preco, rating, botao);
 
     return artigo;
 }
