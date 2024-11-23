@@ -11,15 +11,20 @@ function adicionarAoCarrinho(produto) {
 }
 
 function carregarCarrinho() {
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []; 
     const selecionadosContainer = document.getElementById('selecionados');
+    const totalContainer = document.getElementById('custo-total'); 
+
     selecionadosContainer.innerHTML = ''; 
+    totalContainer.innerHTML = ''; 
+
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || []; 
 
     if (carrinho.length === 0) {
-        const mensagem = document.createElement('p');
-        mensagem.textContent = 'Custo Total: 0.00€';
-        mensagem.classList.add('preco-inicial');
-        selecionadosContainer.append(mensagem);
+
+        const totalElement = document.createElement('p');
+        totalElement.textContent = 'Custo Total: 0.00€';
+        totalElement.classList.add('preco-total');
+        totalContainer.append(totalElement);
         return;
     }
 
@@ -33,46 +38,45 @@ function carregarCarrinho() {
 
   
     const totalElement = document.createElement('p');
-    totalElement.textContent = `Custo Total: ${precoTotal}€`;
+    totalElement.textContent = `Custo Total: ${precoTotal.toFixed(2)}€`;
     totalElement.classList.add('preco-total');
-    selecionadosContainer.append(totalElement);
+    totalContainer.append(totalElement);
 }
+
 
 function criarProdutoCarrinho(produto, index) {
     const artigo = document.createElement('article');
     artigo.classList.add('product-card'); 
 
-// Título
+
 const titulo = document.createElement('h3');
 titulo.textContent = produto.title;
 
-// Imagem
 const imagem = document.createElement('img');
 imagem.src = produto.image;
 imagem.alt = produto.title;
 imagem.classList.add('imagem');
 
-// Descrição
+
 const descricao = document.createElement('p');
 descricao.textContent = produto.description;
 descricao.classList.add('descricao');
 
-// Preço
+
 const preco = document.createElement('p');
 preco.textContent = `Preço: ${produto.price}€`;
 preco.classList.add('price');
 
-// Rating
+
 const rating = document.createElement('p');
 rating.textContent = `Rating: ${produto.rating.rate} ⭐ (${produto.rating.count} avaliações)`;
 rating.classList.add('rating');
 
-    // Botão para remover
     const botaoRemover = document.createElement('button');
     botaoRemover.textContent = '- Remover do Cesto';
     botaoRemover.classList.add('remover-botao');
     botaoRemover.addEventListener('click', function () {
-        removerProdutoCarrinho(index); // Função para remover o produto
+        removerProdutoCarrinho(index); 
     });
 
     artigo.append(titulo, imagem,descricao, preco,rating, botaoRemover);
@@ -100,36 +104,35 @@ function criarProduto(produto) {
     const artigo = document.createElement('article');
     artigo.classList.add('product-card');
 
-    // Título
+    
     const titulo = document.createElement('h3');
     titulo.textContent = produto.title;
 
-    // Imagem
+    
     const imagem = document.createElement('img');
     imagem.src = produto.image;
     imagem.alt = produto.title;
     imagem.classList.add('imagem');
 
-    // Descrição
+    
     const descricao = document.createElement('p');
     descricao.textContent = produto.description;
     descricao.classList.add('descricao');
 
-    // Preço
     const preco = document.createElement('p');
     preco.textContent = `Preço: ${produto.price}€`;
     preco.classList.add('price');
 
-    // Rating
+    
     const rating = document.createElement('p');
     rating.textContent = `Rating: ${produto.rating.rate} ⭐ (${produto.rating.count} avaliações)`;
     rating.classList.add('rating');
 
-    // Botão para adicionar ao carrinho
+    
     const botao = document.createElement('button');
     botao.textContent = '+ Adicionar ao Cesto';
     botao.addEventListener('click', function () {
-        adicionarAoCarrinho(produto); // Chama a função de adicionar
+        adicionarAoCarrinho(produto); 
     });
 
     artigo.append(titulo, imagem, descricao, preco, rating, botao);
