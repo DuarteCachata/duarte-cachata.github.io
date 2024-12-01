@@ -178,7 +178,7 @@ function carregarCarrinho() {
     if (carrinho.length === 0) {
         const mensagemVazia = document.createElement('p');
         mensagemVazia.textContent = 'O carrinho está vazio';
-        mensagemVazia.classList.add('empty-cart-message'); 
+        mensagemVazia.classList.add('preco-inicial'); 
         selecionados.appendChild(mensagemVazia);
         return;
     }
@@ -187,7 +187,7 @@ function carregarCarrinho() {
 
     carrinho.forEach((produto, index) => {
         const artigo = document.createElement('article');
-        artigo.classList.add('product-card', 'carrinho'); 
+        artigo.classList.add('product-card'); 
 
         const titulo = document.createElement('h3');
         titulo.textContent = produto.title;
@@ -228,7 +228,7 @@ function carregarCarrinho() {
     
     const totalElement = document.createElement('p');
     totalElement.textContent = `Custo total: ${total.toFixed(2)}€`;
-    totalElement.classList.add('total'); 
+    totalElement.classList.add('preco-total'); 
     custoTotal.appendChild(totalElement);
 
     

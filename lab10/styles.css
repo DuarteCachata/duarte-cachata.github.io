@@ -53,6 +53,28 @@ header a {
     justify-content: center;
 }
 
+.filtros{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    align-items: center;
+  }
+  
+  .filtros h3{
+    padding: 10px;
+    color: white;
+  }
+  
+  .filtros select{
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .filtros input {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
 nav ul{
     list-style: none;
     display: flex;
@@ -182,9 +204,46 @@ footer{
 .preco-total {
     font-weight: bold; 
     font-size: 1.2rem; 
-    color: white; 
+    color: black; 
+    margin-top: 20px;
     
 }
+
+.comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(165, 201, 202);
+    margin: 50px;
+    border-radius: 10px;
+  }
+
+.comprar input {
+  border-color: black;
+  outline: none;
+}
+
+.comprar h4{
+margin-top: 10px;
+}
+
+.comprar button {
+  margin: 20px;
+  background-color: rgb(32, 32, 32);
+  color: white;
+  padding: 10px; 
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.recibo{
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1.2rem;
+  }
 
 .preco-inicial {
     font-weight: bold; 
