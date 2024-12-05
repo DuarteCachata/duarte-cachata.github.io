@@ -130,12 +130,12 @@ function atualizarProdutosFiltrados(produtos) {
         ? produtos
         : produtos.filter(produto => produto.category === filtroCategoria);
 
-    if (termoPesquisa) {
-        produtosFiltrados = produtosFiltrados.filter(produto =>
-            produto.title.toLowerCase().includes(termoPesquisa) ||
-            produto.description.toLowerCase().includes(termoPesquisa)
-        );
-    }
+        if (termoPesquisa) {
+            produtosFiltrados = produtosFiltrados.filter(produto =>
+                produto.title.toLowerCase().includes(termoPesquisa) ||
+                produto.description.toLowerCase().includes(termoPesquisa) 
+            );
+        }
 
     if (ordemSelecionada === 'Rating Decrescente') {
         produtosFiltrados.sort((a, b) => b.rating.rate - a.rating.rate);
