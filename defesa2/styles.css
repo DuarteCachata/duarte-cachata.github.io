@@ -1,0 +1,260 @@
+* {
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; 
+}
+
+header {
+    background-color: rgb(165, 201, 202);
+    color: white;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100vw;
+    top:0;
+    z-index: 1;
+}
+
+header h1 {
+    display: block;
+    margin: 20px;
+    font-weight: bold;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(44, 51, 51);
+}
+
+header a {
+    color: white;
+    text-align: center;
+    margin: 20px;
+    text-decoration: none;
+}
+
+
+#produtos{
+    background-color: rgb(57, 91, 100);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#selecionados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filtros{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    align-items: center;
+  }
+  
+  .filtros h3{
+    padding: 10px;
+    color: white;
+  }
+  
+  .filtros select{
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .filtros input {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+footer{
+    background-color: rgb(231, 246, 242) ;
+    text-align: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom:0;
+    width: 100vw;
+    height: 10vh;
+}
+
+
+#title-produtos h2{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    color: white;
+}
+
+#title-produtos {
+    text-align: center;
+    margin: 50px;
+}
+
+#title-selecionados h2{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+    color: white;
+}
+
+#title-selecionados {
+    text-align: center;
+    margin: 50px;
+}
+
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 30px;
+    justify-content: space-between;
+    transition: transform 0.5s;
+}
+
+.product-card:hover {
+    transform: scale(1.01);
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    width: 250px;
+    border-radius: 5px;
+    object-fit: contain;
+  }
+  
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+
+
+.descricao {
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1em;
+    color: #555;
+    margin: 15px;
+}
+
+.price {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.product-card button {
+
+    background-color: rgb(165, 201, 202);
+    color: white;
+    border: 1px solid black;
+    padding: 15px ;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 10px;
+}
+
+.product-card button:hover {
+    background-color: rgb(231, 246, 242);
+    color: black;
+}
+
+.rating{
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+    font-weight: bold;
+}
+
+.preco-total {
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    color: black; 
+    margin-top: 20px;
+    
+}
+
+.comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(165, 201, 202);
+    margin: 50px;
+    border-radius: 10px;
+  }
+
+.comprar input {
+  border-color: black;
+  outline: none;
+}
+
+.comprar h4{
+margin-top: 10px;
+}
+
+.comprar button {
+  margin: 20px;
+  background-color: rgb(32, 32, 32);
+  color: white;
+  padding: 10px; 
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.recibo{
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1.2rem;
+  }
+
+.preco-inicial {
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    color: white; 
+    
+}
+
+.categoria{
+    margin: 10px;
+}
+
+
+
