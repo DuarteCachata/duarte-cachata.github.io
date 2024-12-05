@@ -138,9 +138,9 @@ function atualizarProdutosFiltrados(produtos) {
     }
 
     if (ordemSelecionada === 'Rating Decrescente') {
-        produtosFiltrados.sort((a, b) => b.rating - a.rating);
+        produtosFiltrados.sort((a, b) => b.rating.rate - a.rating.rate);
     } else if (ordemSelecionada === 'Rating Crescente') {
-        produtosFiltrados.sort((a, b) => a.rating - b.rating);
+        produtosFiltrados.sort((a, b) => a.rating.rate - b.rating.rate);
     }
 
     carregarProdutos(produtosFiltrados);
